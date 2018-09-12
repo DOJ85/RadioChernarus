@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #636363;
+  background: -webkit-linear-gradient(to right, #303030, #636363);
+  background: linear-gradient(to right, #303030, #636363);
+  height: 100%;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: none;
+  color:#660d17;
+}
+
+.radioChernarusBG {
+  width: 100%;
+  height: 500px;
+  background-image: url("images/radio_chernarus_header.jpg");
+  background-position: 50% 60%;
+  box-shadow: 0 0 25px black;
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: default;
+}
+
+.radioChernarusTitleBG h1::selection, span::selection {
+  background-color: none;
+  color: none;
+}
+
+.radioChernarusBG::before {
+  content: "";
+  background-image: url("vendors/grain.png");
+  height: 100%;
+  width: 400%;
+  opacity: 0.3;
+  position: fixed;
+  animation: grain 8s steps(10) infinite;
+  position: relative;
+}
+
+@keyframes grain {
+  0%, 100% { transform:translate(-10%, 0%) }
+  10% { transform:translate(10%, 0%) }
+  20% { transform:translate(-10%, 0%) }
+  30% { transform:translate(10%, 0%) }
+  40% { transform:translate(-10%, 0%) }
+  50% { transform:translate(10%, 0%) }
+  60% { transform:translate(-10%, 0%) }
+  70% { transform:translate(10%, 0%) }
+  80% { transform:translate(-10%, 0%) }
+  90% { transform:translate(10%, 0%) }
+}
+
+.radioChernarusTitleBG {
+  border: 2px solid #fff;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, .2);
+  position: fixed;
+  padding: 30px;
+}
+
+
+
+@font-face {
+    font-family: "RUSKOF";
+    src: url("vendors/RUSKOF.ttf") format("truetype");
+}
+
+
+.radioChernarusBG h1 {
+  color: #fff;
+  font-family: "RUSKOF", sans-serif;
+  font-size: 5vw;
+  text-shadow: 0 0 25px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+  letter-spacing: 5px;
+  font-weight: lighter;
+}
+
+.channel {
+  font-size: 5.3vw;
+  color: #ba8946;
+}
+
+
+
+.songSuggestionSection {
+  font-family: "Inconsolata", sans-serif;
+  text-align: center;
+  margin-top: 2%;
+  font-size: 21px;
+  width: 100%;
+}
+
+
+
+
+.songRequest {
+  margin-top: 5%;
+  float: left;
+  width: 50%;
+}
+.songRequest h1 {
+  margin-bottom: 4%;
+}
+.songSuggestionInput {
+  width: 50%;
+  outline: none;
+  height: 35px;
+  border: 1px solid black;
+  background-color: #636363;
+  border-radius: 3px;
+  font-size: 16px;
+}
+.songSuggestionSubmit {
+  height: 35px;
+  background-color: #636363;
+  border-radius: 3px;
+  border: 1px solid black;
+  padding: 0 5px;
+  outline: none;
+  font-weight: bold;
+}
+.songSuggestionSubmit:active {
+  -webkit-box-shadow: inset 0px 0px 48px 3px rgba(0,0,0,0.4);
+  -moz-box-shadow: inset 0px 0px 48px 3px rgba(0,0,0,0.4);
+  box-shadow: inset 0px 0px 48px 3px rgba(0,0,0,0.4);
+}
+
+
+
+.songList {
+  margin-top: 2%;
+  float: right;
+  width: 50%;
+}
+
+.songList h1 {
+  margin-bottom: 2%;
+}
+
+.songList ul {
+  list-style: none;
+  margin-bottom: 4%;
+  text-shadow: 0 0 15px rgba(0,0,0,.3);
+}

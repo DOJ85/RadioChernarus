@@ -8,7 +8,6 @@ body {
   background: -webkit-linear-gradient(to right, #303030, #636363);
   background: linear-gradient(to right, #303030, #636363);
   height: 100%;
-  overflow-x: hidden;
 }
 
 ::selection {
@@ -27,6 +26,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   cursor: default;
 }
 
@@ -44,6 +44,7 @@ body {
   position: fixed;
   animation: grain 8s steps(10) infinite;
   position: relative;
+  overflow: hidden;
 }
 
 @keyframes grain {

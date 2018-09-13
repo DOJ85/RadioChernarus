@@ -8,6 +8,7 @@ body {
   background: -webkit-linear-gradient(to right, #303030, #636363);
   background: linear-gradient(to right, #303030, #636363);
   height: 100%;
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -44,7 +45,6 @@ body {
   position: fixed;
   animation: grain 8s steps(10) infinite;
   position: relative;
-  overflow: hidden;
 }
 
 @keyframes grain {
@@ -66,8 +66,8 @@ body {
   background-color: rgba(255, 255, 255, .2);
   position: fixed;
   padding: 30px;
+  position: absolute;
 }
-
 
 
 @font-face {

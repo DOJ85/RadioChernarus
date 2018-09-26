@@ -1,7 +1,10 @@
+/* - - - - - - - - - - - - - - - - - - - - - - G E N E R A L - - - */
+
 * {
   margin: 0;
   padding: 0;
 }
+
 
 body {
   background: #636363;
@@ -11,10 +14,15 @@ body {
   overflow-x: hidden;
 }
 
+
 ::selection {
   background-color: none;
   color:#660d17;
 }
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - H E A D E R - - - */
+
 
 .radioChernarusBG {
   width: 100%;
@@ -23,20 +31,27 @@ body {
   background-position: 50% 60%;
   box-shadow: 0 0 25px black;
   border-bottom: 2px solid black;
+
+  overflow: hidden;
+  cursor: default;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.radioChernarusContainer {
+  width: 100%;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  cursor: default;
 }
 
-.radioChernarusTitleBG h1::selection, span::selection {
-  background-color: none;
-  color: none;
-}
 
-.radioChernarusBG::before {
+/* - - - - - - - - G R A I N   E F F E C T - - - */
+
+
+.radioChernarusContainer::before {
   content: "";
   background-image: url("vendors/grain.png");
   height: 100%;
@@ -46,6 +61,7 @@ body {
   animation: grain 8s steps(10) infinite;
   position: relative;
 }
+
 
 @keyframes grain {
   0%, 100% { transform:translate(-10%, 0%) }
@@ -60,6 +76,42 @@ body {
   90% { transform:translate(10%, 0%) }
 }
 
+
+/* - - - - - - - - - - - - - - - - - - - - - - L O G S - - - */
+
+
+.logs {
+  color: #fff;
+  z-index: 9999;
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  font-family: "RUSKOF", sans-serif;
+  white-space: nowrap;
+}
+
+.logs a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.4em;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, .2);
+  padding: 7px 15px;
+  margin-left: 15px;
+  text-shadow: 0 0 5px black;
+  transition: .7s;
+}
+
+.logs a:hover{
+  background-color: rgba(255, 255, 255, .4);
+  transition: .7s;
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - T I T L E - - - */
+
+
 .radioChernarusTitleBG {
   border: 2px solid #fff;
   border-radius: 2px;
@@ -67,6 +119,18 @@ body {
   position: fixed;
   padding: 30px;
   position: absolute;
+}
+
+
+.channel {
+  font-size: 5.3vw;
+  color: #ba8946;
+}
+
+
+.radioChernarusTitleBG h1::selection, span::selection {
+  background-color: none;
+  color: none;
 }
 
 
@@ -85,11 +149,8 @@ body {
   font-weight: lighter;
 }
 
-.channel {
-  font-size: 5.3vw;
-  color: #ba8946;
-}
 
+/* - - - - - - - - - - - - - - - - - - - - - - S O N G S   P A R T S - - - */
 
 
 .songSuggestionSection {
@@ -101,6 +162,7 @@ body {
 }
 
 
+/* - - - - - - - - S O N G   R E Q U E S T - - - */
 
 
 .songRequest {
@@ -108,9 +170,13 @@ body {
   float: left;
   width: 50%;
 }
+
+
 .songRequest h1 {
   margin-bottom: 4%;
 }
+
+
 .songSuggestionInput {
   width: 50%;
   outline: none;
@@ -120,6 +186,8 @@ body {
   border-radius: 3px;
   font-size: 16px;
 }
+
+
 .songSuggestionSubmit {
   height: 35px;
   background-color: #636363;
@@ -129,6 +197,8 @@ body {
   outline: none;
   font-weight: bold;
 }
+
+
 .songSuggestionSubmit:active {
   -webkit-box-shadow: inset 0px 0px 48px 3px rgba(0,0,0,0.4);
   -moz-box-shadow: inset 0px 0px 48px 3px rgba(0,0,0,0.4);
@@ -136,6 +206,7 @@ body {
 }
 
 
+/* - - - - - - - - S O N G   L I S T - - - */
 
 .songList {
   margin-top: 2%;
@@ -143,9 +214,11 @@ body {
   width: 50%;
 }
 
+
 .songList h1 {
   margin-bottom: 2%;
 }
+
 
 .songList ul {
   list-style: none;

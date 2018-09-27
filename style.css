@@ -6,7 +6,7 @@
 }
 
 
-body {
+.homeBody {
   background: #636363;
   background: -webkit-linear-gradient(to right, #303030, #636363);
   background: linear-gradient(to right, #303030, #636363);
@@ -31,7 +31,6 @@ body {
   background-position: 50% 60%;
   box-shadow: 0 0 25px black;
   border-bottom: 2px solid black;
-
   overflow: hidden;
   cursor: default;
   background-size: cover;
@@ -226,4 +225,85 @@ body {
   list-style: none;
   margin-bottom: 4%;
   text-shadow: 0 0 15px rgba(0,0,0,.3);
+}
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S I G N   I N   P A G E - - - */
+
+
+.signInBody {
+  background-image: url("images/signin_background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.signInForm {
+  border: 2px solid #fff;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, .4);
+  padding: 30px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, .65);
+}
+
+
+.signInForm input {
+  border: 2px solid #fff;
+  background-color: rgba(255, 255, 255, .65);
+  text-wrap: nowrap;
+  outline: none;
+  height: 27px;
+  min-width: 15vw;
+  margin-bottom: .35vw;
+}
+
+.signInForm input::-webkit-input-placeholder {
+  font-family: "RUSKOF";
+  font-size: 170%;
+  text-align: center;
+}
+.signInForm input:-moz-placeholder { /* Firefox 18- */
+  font-family: "RUSKOF";
+  font-size: 170%;
+  text-align: center;
+}
+.signInForm input::-moz-placeholder {  /* Firefox 19+ */
+  font-family: "RUSKOF";
+  font-size: 170%;
+  text-align: center;
+}
+.signInForm input:-ms-input-placeholder {
+  font-family: "RUSKOF";
+  font-size: 170%;
+  text-align: center;
+}
+
+.caca {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputValidate {
+  min-width: inherit!important;
+  padding: 0px 15px;
+  font-family: "RUSKOF", sans-serif;
+  font-size: 150%;
+}
+
+
+.signInContainer {
+
 }
